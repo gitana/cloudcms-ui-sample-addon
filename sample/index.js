@@ -6,8 +6,8 @@ define(function(require) {
     //
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // the "sample" gadget
-    require("./gadgets/sample/sample");
+    // the sample page
+    require("./gadgets/sample-page/sample-page.js");
 
     // global CSS overrides
     require("css!./styles/sample.css");

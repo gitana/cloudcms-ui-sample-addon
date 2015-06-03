@@ -1,0 +1,27 @@
+{
+    "evaluator": "context-project",
+    "config": {
+        "context": {
+            "items": [{
+                "key": "sample/header",
+                "title": "Sample Page",
+                "order": 10000,
+                "header": true,
+                "iconClass": "fa fa-dashboard",
+                "allowAuthority": ["manager"],
+                "allowPermission": ["read"],
+                "rejectAuthority": [],
+                "rejectPermission": [],
+                "items": [{
+                    "key": "sample/page",
+                    "title": "Sample Page",
+                    "uri": "#/projects/{projectId}/sample",
+                    "iconClass": "fa fa-pencil",
+                    "allowPermission": [
+                        "manager"
+                    ]
+                }]
+            }]
+        }
+    }
+}

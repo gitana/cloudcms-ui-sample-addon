@@ -1,13 +1,12 @@
 define(function(require, exports, module) {
 
-    require("css!./sample.css");
-    var html = require("text!./sample.html");
+    require("css!./sample-page.css");
+    var html = require("text!./sample-page.html");
 
     var Ratchet = require("ratchet/web");
-    var OneTeam = require("oneteam");
     var Empty = require("ratchet/dynamic/empty");
 
-    return Ratchet.GadgetRegistry.register("sample", Empty.extend({
+    return Ratchet.GadgetRegistry.register("sample-page", Empty.extend({
 
         TEMPLATE: html,
 
@@ -19,9 +18,9 @@ define(function(require, exports, module) {
 
             var self = this;
 
-            this.base(el, model, function() {
+            var project = self.observable("project").get();
 
-                var project = self.observable("project").get();
+            this.base(el, model, function() {
 
                 model.title = "Hello World for project " + project.title;
 

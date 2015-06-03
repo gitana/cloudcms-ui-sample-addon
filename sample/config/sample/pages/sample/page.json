@@ -2,5 +2,5 @@
     "title": "Sample",
     "uri": "/projects/{projectId}/sample",
     "extends": "project/_project",
-    "template": "sample"
+    "template": "sample-template"
 }

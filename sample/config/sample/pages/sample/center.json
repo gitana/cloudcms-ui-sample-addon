@@ -1,6 +1,8 @@
 {
-    "type": "sample",
+    "type": "sample-page",
     "config": {
-        "chrome": false
+        "chrome": {
+            "title": "Sample Page"
+        }
     }
 }
