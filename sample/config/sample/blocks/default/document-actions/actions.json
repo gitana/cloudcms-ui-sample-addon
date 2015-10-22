@@ -1,0 +1,19 @@
+{
+    "evaluator": [{
+        "evaluator": "context-project"
+    }, {
+        "evaluator": "project-has-module",
+        "condition": "sample"
+    }],
+    "config": {
+        "document-actions": [{
+            "key": "touch-document",
+            "rejectAuthority": [
+                "consumer",
+                "contributor",
+                "collaborator",                
+                "editor"
+            ]
+        }]
+    }
+}

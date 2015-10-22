@@ -1,5 +1,10 @@
 {
-    "evaluator": "context-project",
+    "evaluator": [{
+        "evaluator": "context-project"
+    }, {
+        "evaluator": "project-has-module",
+        "condition": "sample"
+    }],
     "config": {
         "context": {
             "items": [{
@@ -13,9 +18,9 @@
                 "rejectAuthority": [],
                 "rejectPermission": [],
                 "items": [{
-                    "key": "sample/page",
-                    "title": "Sample Page",
-                    "uri": "#/projects/{projectId}/sample",
+                    "key": "sample/products",
+                    "title": "Products",
+                    "uri": "#/projects/{projectId}/products",
                     "iconClass": "fa fa-pencil",
                     "allowPermission": [
                         "manager"

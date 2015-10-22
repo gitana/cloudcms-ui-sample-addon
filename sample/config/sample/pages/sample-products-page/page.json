@@ -1,0 +1,6 @@
+{
+    "title": "Sample Products Page",
+    "uri": "/projects/{projectId}/products",
+    "extends": "project/_project",
+    "template": "sample-template"
+}

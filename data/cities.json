@@ -1,0 +1,24 @@
+{
+    "cities": [{
+        "value": "boston",
+        "text": "Boston"
+    }, {
+        "value": "cleveland",
+        "text": "Cleveland"
+    }, {
+        "value": "chicago",
+        "text": "Chicago"
+    }, {
+        "value": "milwaukee",
+        "text": "Milwaukee"
+    }, {
+        "value": "austin",
+        "text": "Austin"
+    }, {
+        "value": "ithaca",
+        "text": "Ithaca"
+    }, {
+        "value": "sydney",
+        "text": "Sydney"
+    }]
+}

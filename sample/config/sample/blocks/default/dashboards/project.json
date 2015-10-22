@@ -1,0 +1,27 @@
+{    
+    "evaluator": "and",
+    "condition": [{
+        "evaluator": "context-project",
+        "condition": true
+    }, {
+        "evaluator": "uri-match",
+        "condition": "/projects/{projectId}"
+    }, {
+        "evaluator": "project-has-module",
+        "condition": "sample"
+    }],
+    "config": {
+        "dashboard": {
+            "rows": [{
+                "columns": [{
+                    "dashlets": [{
+                        "title": "Sample Spaces",
+                        "type": "sample-dashlet",
+                        "chrome": true
+                    }]
+                }]
+            }]
+        }
+    },
+    "order": 10000
+}

@@ -1,0 +1,15 @@
+<h2>Products</h2>
+
+{{#each products}}
+<div class="media">
+    <div class="media-left">
+        <a href="#" class="media-popup" data-media-id="{{_doc}}">
+            <img class="media-object" src="/static/node/{{_doc}}/default" alt="{{title}}">
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">{{title}}</h4>
+        {{description}}
+    </div>
+</div>
+{{/each}}

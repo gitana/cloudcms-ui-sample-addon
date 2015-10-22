@@ -1,0 +1,27 @@
+{
+    "evaluator": [{
+        "evaluator": "context-project"
+    }, {
+        "evaluator": "project-has-module",
+        "condition": "sample"
+    }, {
+        "evaluator": "context-document",
+        "condition": true
+    }],
+    "config": {
+        "subcontext": {
+            "items": [{
+                "key": "document",
+                "items": [{
+                    "key": "document/json",
+                    "rejectAuthority": [
+                        "consumer",
+                        "contributor",
+                        "collaborator",
+                        "editor"
+                    ]
+                }]
+            }]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "evaluator": [{
+        "evaluator": "context-project"
+    }, {
+        "evaluator": "project-has-module",
+        "condition": "sample"
+    }, {
+        "evaluator": "document-is-folder",
+        "condition": true
+    }],
+    "config": {
+        "documents-list-buttons": [{
+            "key": "new",
+            "buttons": [{
+                "key": "create-sample-space",
+                "title": "Create a Sample Space",
+                "iconClass": "fa fa-add",
+                "align": "left",
+                "action": "create-sample-space",
+                "allowPermission": [
+                    "create_subobjects"
+                ]
+            }]
+        }]
+    }
+}
