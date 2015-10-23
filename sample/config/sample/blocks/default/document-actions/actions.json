@@ -1,10 +1,5 @@
 {
-    "evaluator": [{
-        "evaluator": "context-project"
-    }, {
-        "evaluator": "project-has-module",
-        "condition": "sample"
-    }],
+    "evaluator": "context-project",
     "config": {
         "document-actions": [{
             "key": "touch-document",

@@ -10,7 +10,7 @@ define(function(require, exports, module) {
             var config = this.base();
 
             config.title = "Create Sample Space";
-            config.iconClass = "fa fa-file-text";
+            config.iconClass = "fa fa-plus";
             return config;
         },
 
@@ -68,9 +68,9 @@ define(function(require, exports, module) {
                         "id": "create",
                         "title": "Create",
                         "handler": function(e) {
-                            UI.showMessage("Creating the sample space...", function() {
+                            UI.showWaitModal("Creating the sample space...", function() {
                                 self.createHandler(actionContext, form, function() {
-                                    UI.hideMessage();
+                                    UI.hideWaitModal();
                                 });
                             });
                         }
@@ -85,10 +85,10 @@ define(function(require, exports, module) {
 
         createHandler: function(actionContext, form, callback)
         {
-            ContentHelpers.addFolder(actionContext, form, "/Spaces", function() {
+            ContentHelpers.addFolder(actionContext, form.getValue(), "/Spaces", function() {
                 ContentHelpers.addFolder(actionContext, {"title": "Images" }, "/Spaces/" + form.title, function(folder) {
                     ContentHelpers.addFile(actionContext, {"title": actionContext.sampleFileName}, "/Spaces/" + form.title, function(file) {
-                        UI.hideMessage();
+                        callback();
                     })
                 });
             });

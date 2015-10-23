@@ -1,9 +1,7 @@
 {
-    "evaluator": [{
+    "evaluator": "and",
+    "condition": [{
         "evaluator": "context-project"
-    }, {
-        "evaluator": "project-has-module",
-        "condition": "sample"
     }, {
         "evaluator": "context-document",
         "condition": true

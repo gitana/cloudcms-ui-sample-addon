@@ -1,15 +1,10 @@
 {
-    "evaluator": [{
-        "evaluator": "context-project"
-    }, {
-        "evaluator": "project-has-module",
-        "condition": "sample"
-    }],
+    "evaluator": "context-project",
     "config": {
         "context": {
             "items": [{
-                "key": "sample/header",
-                "title": "Sample Page",
+                "key": "catalog/header",
+                "title": "Catalog",
                 "order": 10000,
                 "header": true,
                 "iconClass": "fa fa-dashboard",

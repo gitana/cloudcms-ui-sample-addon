@@ -8,17 +8,15 @@ define(function(require, exports, module) {
 
         determinePropertyDisplaySettings: function(document, propertyName)
         {
-            if (document.getTypeQName() === "custom:product" && propertyName === "abc")
+            if (document.getTypeQName() === "catalog:product" && propertyName === "sku")
             {
                 return {
-                    "link": "http://www.cnn.com"
+                    "link": "https://www.wickedgoodcupcakes.com"
                 };
             }
 
-            return {
-                "link": null,
-                "linkAttributes": null
-            };
+            // otherwise, let the base class handle this
+            return this.base();
         }
 
     }));

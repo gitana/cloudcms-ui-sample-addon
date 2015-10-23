@@ -29,7 +29,7 @@ define(function(require, exports, module) {
         prepareModel: function(el, model, callback) {
 
             // get the current project
-            // var project = this.observable("project").get();
+            var project = this.observable("project").get();
 
             // the current branch
             var branch = this.observable("branch").get();
@@ -37,13 +37,24 @@ define(function(require, exports, module) {
             // call into base method and then set up the model
             this.base(el, model, function() {
 
-                // query for custom:product instances
-                branch.queryNodes({ "_type": "custom:product" }).then(function() {
+                // query for catalog:product instances
+                branch.queryNodes({ "_type": "catalog:product" }).then(function() {
 
                     // store "products" on the model (as a list) and then fire callback
-                    model.products = this.asList();
-                    callback();
+                    model.products = this.asArray();
 
+                    // add "imageUrl" attribute to each product
+                    // add "browseUrl" attribute to each product
+                    for (var i = 0; i < model.products.length; i++)
+                    {
+                        var product = model.products[i];
+
+                        product.imageUrl256 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=256&name=preview256&force=true";
+                        product.imageUrl128 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=128&name=preview128&force=true";
+                        product.browseUrl = "/#/projects/" + project._doc + "/documents/" + product._doc;
+                    }
+
+                    callback();
                 });
             });
         },
@@ -77,9 +88,18 @@ define(function(require, exports, module) {
             this.base(el, model, originalContext, function() {
 
                 // find all .media-popups and attach to a lightbox
-                $(el).find(".media-popup").click(function() {
-                    alert("Clicked!");
-                })
+                $(el).find(".media-popup").click(function(e) {
+
+                    e.preventDefault();
+
+                    var productIndex = $(this).attr("data-media-index");
+                    var product = model.products[productIndex];
+
+                    UI.showPopupModal({
+                        "title": "Viewing: " + product.title,
+                        "body": "<div style='text-align:center'><img src='" + product.imageUrl + "'></div>"
+                    });
+                });
 
                 callback();
             });

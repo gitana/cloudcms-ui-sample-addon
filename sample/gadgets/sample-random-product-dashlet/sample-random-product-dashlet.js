@@ -28,14 +28,17 @@ define(function(require, exports, module) {
             // call into base method and then set up the model
             this.base(el, model, function() {
 
-                // query for custom:product instances
-                branch.queryNodes({ "_type": "custom:product" }).then(function() {
+                // query for catalog:product instances
+                branch.queryNodes({ "_type": "catalog:product" }).then(function() {
 
                     // all of the products
-                    var products = this.asList();
+                    var products = this.asArray();
 
                     // keep one at random
-                    model.product = products[Math.random() * products.length];
+                    var product = model.product = products[Math.floor(Math.random() * products.length)];
+
+                    // add "imageUrl" value to product (retrieve preview of width 256)
+                    product.imageUrl = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=256&name=preview256";
 
                     callback();
                 });
