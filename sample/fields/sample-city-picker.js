@@ -26,7 +26,7 @@ define(function(require, exports, module) {
                     url: "https://raw.githubusercontent.com/gitana/cloudcms-ui-sample-addon/master/data/cities.json",
                     dataType: "json"
                 }).done(function(json) {
-                    callback(null, json.cities);
+                    callback(json.cities);
                 });
             };
         }

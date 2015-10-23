@@ -1,0 +1,14 @@
+{
+    "evaluator": "uri-match",
+    "condition": "/projects/{projectId}/documents/{documentId}",
+    "config": {
+        "regions": {
+            "right1": {
+                "type": "sample-product-document-properties",
+                "config": {
+                    "chrome": false
+                }
+            }
+        }
+    }
+}
