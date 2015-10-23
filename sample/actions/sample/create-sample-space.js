@@ -16,7 +16,8 @@ define(function(require, exports, module) {
 
         prepareAction: function(actionContext, config, callback) {
 
-            actionContext.sampleFileName = "HelloWorld.txt";
+            actionContext.currentPath = actionContext.observable("path").get();
+
             callback();
         },
 
@@ -69,7 +70,7 @@ define(function(require, exports, module) {
                         "title": "Create",
                         "handler": function(e) {
                             UI.showWaitModal("Creating the sample space...", function() {
-                                self.createHandler(actionContext, form, function() {
+                                self.createHandler(actionContext, form.getValue(), function() {
                                     UI.hideWaitModal();
                                 });
                             });
@@ -83,14 +84,27 @@ define(function(require, exports, module) {
             });
         },
 
-        createHandler: function(actionContext, form, callback)
+        createHandler: function(actionContext, props, callback)
         {
-            ContentHelpers.addFolder(actionContext, form.getValue(), "/Spaces", function() {
-                ContentHelpers.addFolder(actionContext, {"title": "Images" }, "/Spaces/" + form.title, function(folder) {
-                    ContentHelpers.addFile(actionContext, {"title": actionContext.sampleFileName}, "/Spaces/" + form.title, function(file) {
-                        callback();
-                    })
-                });
+            ContentHelpers.addContent(actionContext, [{
+                "type": "folder",
+                "properties": props,
+                "parentFolderPath": actionContext.currentPath
+            }, {
+                "type": "folder",
+                "properties": {
+                    "title": "Files"
+                },
+                "parentFolderPath": actionContext.currentPath + "/" + props.title
+            }, {
+                "type": "file",
+                "properties": {
+                    "title": "helloworld.txt"
+                },
+                "parentFolderPath": actionContext.currentPath + "/" + props.title + "/Files",
+                "text": "Hello World!"
+            }], function(files) {
+                callback();
             });
         }
 
