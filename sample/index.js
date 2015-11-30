@@ -1,7 +1,7 @@
 define(function(require) {
 
-    // page: "sample-products-page"
-    require("./gadgets/sample-products-page/sample-products-page.js");
+    // page: "sample-products-list"
+    require("./gadgets/sample-products-list/sample-products-list.js");
 
     // dashlet: "sample-random-product-dashlet"
     require("./gadgets/sample-random-product-dashlet/sample-random-product-dashlet.js");

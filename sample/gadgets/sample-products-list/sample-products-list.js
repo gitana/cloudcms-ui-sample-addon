@@ -1,13 +1,13 @@
 define(function(require, exports, module) {
 
-    require("css!./sample-products-page.css");
-    var html = require("text!./sample-products-page.html");
+    require("css!./sample-products-list.css");
+    var html = require("text!./sample-products-list.html");
 
     var Empty = require("ratchet/dynamic/empty");
 
     var UI = require("ui");
 
-    return UI.registerGadget("sample-products-page", Empty.extend({
+    return UI.registerGadget("sample-products-list", Empty.extend({
 
         TEMPLATE: html,
 
