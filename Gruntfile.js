@@ -52,7 +52,7 @@ module.exports = function(grunt) {
                     },
                     "name": "sample/index",
                     "out": "sample/index-prod.js",
-                    //"excludeShallow": ["normalize", "css"],
+                    "excludeShallow": ["normalize", "css"],
                     "optimize": "uglify2",
                     //"optimizeCss": "none",
                     "insertRequire": ["sample/index"]
