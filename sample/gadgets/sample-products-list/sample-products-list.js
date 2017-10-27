@@ -97,7 +97,7 @@ define(function(require, exports, module) {
 
                     UI.showPopupModal({
                         "title": "Viewing: " + product.title,
-                        "body": "<div style='text-align:center'><img src='" + product.imageUrl + "'></div>"
+                        "body": "<div style='text-align:center'><img src='" + product.imageUrl256 + "'></div>"
                     });
                 });
 
