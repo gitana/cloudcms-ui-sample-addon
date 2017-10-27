@@ -1,15 +1,17 @@
-{{#each products}}
-<div class="media">
-    <div class="media-left">
-        <a href="#" class="media-popup" data-media-index="{{@index}}">
-            <img class="media-object" src="{{imageUrl128}}" alt="{{title}}">
-        </a>
+<div>
+    {{#each products}}
+    <div class="media">
+        <div class="media-left">
+            <a href="#" class="media-popup" data-media-index="{{@index}}">
+                <img class="media-object" src="{{imageUrl128}}" alt="{{title}}">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">
+                <a href="{{browseUrl}}">{{title}}</a>
+            </h4>
+            {{description}}
+        </div>
     </div>
-    <div class="media-body">
-        <h4 class="media-heading">
-            <a href="{{browseUrl}}">{{title}}</a>
-        </h4>
-        {{description}}
-    </div>
+    {{/each}}
 </div>
-{{/each}}
