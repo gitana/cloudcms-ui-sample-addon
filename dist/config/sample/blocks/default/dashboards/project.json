@@ -15,6 +15,10 @@
                         "title": "Random Product",
                         "type": "sample-random-product-dashlet",
                         "chrome": true
+                    }, {
+                        "title": "Random Product",
+                        "type": "sample-random-product-dashlet",
+                        "chrome": true                        
                     }]
                 }]
             }]
