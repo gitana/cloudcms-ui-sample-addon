@@ -23,7 +23,8 @@ define(function(require, exports, module) {
             this.options.dataSource = function(callback) {
                 $.ajax({
                     method: "GET",
-                    url: "https://raw.githubusercontent.com/gitana/cloudcms-ui-sample-addon/master/data/cities.json",
+//                    url: "https://raw.githubusercontent.com/gitana/cloudcms-ui-sample-addon/master/data/cities.json",
+                    url: "./data/cities.json",
                     dataType: "json"
                 }).done(function(json) {
                     callback(json.cities);

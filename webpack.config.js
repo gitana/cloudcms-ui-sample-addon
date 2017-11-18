@@ -52,6 +52,12 @@ module.exports = {
             "from": "./config",
             "to": "config"
         }, {
+            "from": "./templates",
+            "to": "templates"
+        }, {
+            "from": "./data",
+            "to": "data"
+        }, {
             "from": "./install.js"
         }, {
             "from": "./uninstall.js"
