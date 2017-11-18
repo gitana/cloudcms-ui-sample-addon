@@ -59,8 +59,7 @@ define(function(require, exports, module) {
             };
 
             // render the form
-            UI.renderForm(formConfig, function(form) {
-
+            UI.renderForm(actionContext, formConfig, function(form) {
                 // pop up a modal and render a form into the body
                 UI.showModal({
                     "title": config.title,

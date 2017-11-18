@@ -4,6 +4,9 @@ This GitHub repository provides a sample UI extension for the Cloud CMS user int
 JavaScript, CSS and HTML templates that are bundled together as a module and deployed to your tenant.  Once deployed,
 the module is served alongside the rest of the Cloud CMS user interface.
 
+The content defintions used by this sample are available in Cloud CMS when using the "Sample Web Project" project. 
+Create a new project and select "Sample Web Project".
+
 Modules are able to do the following:
 
 - introduce new user interface components
