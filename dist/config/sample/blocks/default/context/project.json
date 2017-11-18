@@ -1,0 +1,27 @@
+{
+    "evaluator": "context-project",
+    "config": {
+        "context": {
+            "items": [{
+                "key": "catalog/header",
+                "title": "Catalog",
+                "order": 10000,
+                "header": true,
+                "iconClass": "fa fa-dashboard",
+                "allowAuthority": ["manager"],
+                "allowPermission": ["read"],
+                "rejectAuthority": [],
+                "rejectPermission": [],
+                "items": [{
+                    "key": "sample/products",
+                    "title": "Products",
+                    "uri": "#/projects/{projectId}/products",
+                    "iconClass": "fa fa-pencil",
+                    "allowPermission": [
+                        "manager"
+                    ]
+                }]
+            }]
+        }
+    }
+}

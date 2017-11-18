@@ -17,6 +17,6 @@ define(function(require) {
     require("./gadgets/sample-product-document-properties/sample-product-document-properties.js");
 
     // global CSS overrides
-    require("css!./styles/sample.css");
+    require("./styles/sample.css");
 
 });

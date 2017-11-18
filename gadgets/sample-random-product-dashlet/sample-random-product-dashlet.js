@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
 
-    var html = require("text!./sample-random-product-dashlet.html");
-    require("css!./sample-random-product-dashlet.css");
+    var html = require("./sample-random-product-dashlet.html");
+    require("./sample-random-product-dashlet.css");
 
     var UI = require("ui");
 

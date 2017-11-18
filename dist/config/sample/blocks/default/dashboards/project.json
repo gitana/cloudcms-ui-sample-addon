@@ -1,0 +1,24 @@
+{    
+    "evaluator": "and",
+    "condition": [{
+        "evaluator": "context-project",
+        "condition": true
+    }, {
+        "evaluator": "uri-match",
+        "condition": "/projects/{projectId}"
+    }],
+    "config": {
+        "dashboard": {
+            "rows": [{
+                "columns": [{
+                    "dashlets": [{
+                        "title": "Random Product",
+                        "type": "sample-random-product-dashlet",
+                        "chrome": true
+                    }]
+                }]
+            }]
+        }
+    },
+    "order": 10000
+}

@@ -1,0 +1,25 @@
+{
+    "evaluator": "and",
+    "condition": [{
+        "evaluator": "context-project"
+    }, {
+        "evaluator": "context-document",
+        "condition": true
+    }],
+    "config": {
+        "subcontext": {
+            "items": [{
+                "key": "document",
+                "items": [{
+                    "key": "document/json",
+                    "rejectAuthority": [
+                        "consumer",
+                        "contributor",
+                        "collaborator",
+                        "editor"
+                    ]
+                }]
+            }]
+        }
+    }
+}

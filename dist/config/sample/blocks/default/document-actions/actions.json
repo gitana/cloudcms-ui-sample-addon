@@ -1,0 +1,14 @@
+{
+    "evaluator": "context-project",
+    "config": {
+        "document-actions": [{
+            "key": "touch-document",
+            "rejectAuthority": [
+                "consumer",
+                "contributor",
+                "collaborator",                
+                "editor"
+            ]
+        }]
+    }
+}

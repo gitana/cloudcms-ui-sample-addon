@@ -1,0 +1,8 @@
+{
+    "type": "sample-products-list",
+    "config": {
+        "chrome": {
+            "title": "Sample Products List"
+        }
+    }
+}
