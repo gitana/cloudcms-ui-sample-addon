@@ -3,7 +3,7 @@
     "config": {
         "project-context": {
             "items": [{
-                "key": "project/catalog/header",
+                "key": "project/catalog",
                 "title": "Catalog",
                 "order": 10000,
                 "header": true,
@@ -13,7 +13,7 @@
                 "rejectAuthority": [],
                 "rejectPermission": [],
                 "items": [{
-                    "key": "project/sample/products",
+                    "key": "project/products",
                     "title": "Products",
                     "uri": "#/projects/{projectId}/products",
                     "iconClass": "fa fa-pencil",
