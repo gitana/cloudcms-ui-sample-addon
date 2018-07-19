@@ -120,21 +120,14 @@ To deploy to the Cloud CMS user interface, please take a look at the instruction
 
 ## Building for Production
 
-You may optionally wish to build for production.  A production build consists of an optimized and minified index.js
-file named '''index-prod.js'''.  If the Cloud CMS UI sees this file next to the index.js file, it will use the
-'''index-prod.js''' file instead.
+You may optionally wish to build for production.  A production build consists of an optimized and minified index.js with its dependencies included.
 
-To build, make sure of following pre-requisities:
-
-1.  Install Node.js
-
-And then, from a command line, do the following:
+To build, make sure Node.js is installed, and then, from a command line, do the following:
 
 3.  Run '''npm install'''
 4.  Run '''npm run build'''
 
-Once finished, you will see an index-prod.js file next to your index.js file.  Make sure this file is checked in as
-Cloud CMS will deploy straight from GitHub and will look for it there.
+Once finished, your build should be in /dist. Be sure to set your source path to /dist when registering your module.
 
 
 ## How do I get help?
