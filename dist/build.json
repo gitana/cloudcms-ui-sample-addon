@@ -4,15 +4,15 @@
     "uninstall.js",
     "install.js",
     "module.json",
-    "data/cities.json",
     "templates/sample-template.html",
-    "config/sample/blocks/default/context/project.json",
+    "data/cities.json",
+    "config/sample/blocks/default/project-context/project.json",
     "config/sample/blocks/default/document-actions/actions.json",
-    "config/sample/blocks/default/regions/document-properties.json",
     "config/sample/blocks/default/dashboards/project.json",
+    "config/sample/blocks/default/regions/document-properties.json",
     "config/sample/blocks/default/documents-list-buttons/folder.json",
-    "config/sample/pages/sample-products-page/page.json",
     "config/sample/blocks/default/subcontext/document.json",
-    "config/sample/pages/sample-products-page/center.json"
+    "config/sample/pages/sample-products-page/center.json",
+    "config/sample/pages/sample-products-page/page.json"
   ]
 }
