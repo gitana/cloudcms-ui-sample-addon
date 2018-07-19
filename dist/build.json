@@ -1,18 +1,18 @@
 {
   "files": [
     "index.js",
-    "config/sample/blocks/default/document-actions/actions.json",
+    "install.js",
+    "uninstall.js",
+    "module.json",
+    "templates/sample-template.html",
+    "data/cities.json",
     "config/sample/blocks/default/context/project.json",
+    "config/sample/blocks/default/document-actions/actions.json",
     "config/sample/blocks/default/dashboards/project.json",
     "config/sample/blocks/default/documents-list-buttons/folder.json",
-    "config/sample/pages/sample-products-page/page.json",
     "config/sample/blocks/default/regions/document-properties.json",
     "config/sample/pages/sample-products-page/center.json",
     "config/sample/blocks/default/subcontext/document.json",
-    "templates/sample-template.html",
-    "data/cities.json",
-    "install.js",
-    "uninstall.js",
-    "module.json"
+    "config/sample/pages/sample-products-page/page.json"
   ]
 }

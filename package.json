@@ -5,21 +5,23 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server ./index.js"
-  },  
+    "start": "webpack-dev-server ./index.js",
+    "build": "webpack --config webpack.config.js"
+  },
   "devDependencies": {
-      "cloudcms-webpack-plugin": "*",
-      "clean-webpack-plugin": "^0.1.17",
-      "copy-webpack-plugin": "^4.2.0",
-      "css-loader": "^0.28.7",
-      "extract-loader": "^1.0.1",
-      "html-loader": "^0.5.1",
-      "raw-loader": "^0.5.1",
-      "resolve-url-loader": "^2.2.0",
-      "text-loader": "0.0.1",
-      "uglifyjs-webpack-plugin": "^1.0.1",
-      "webpack": "^3.8.1",
-      "webpack-css-loaders": "^1.0.0",
-      "webpack-dev-server": "^2.9.4"
+    "clean-webpack-plugin": "^0.1.17",
+    "cloudcms-webpack-plugin": "*",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^0.28.7",
+    "extract-loader": "^1.0.1",
+    "html-loader": "^0.5.1",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^2.2.0",
+    "text-loader": "0.0.1",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-css-loaders": "^1.0.0",
+    "webpack-dev-server": "^3.1.4"
   }
 }

@@ -1,7 +1,7 @@
 {
     "evaluator": "context-project",
     "config": {
-        "context": {
+        "project-context": {
             "items": [{
                 "key": "catalog/header",
                 "title": "Catalog",
