@@ -9,6 +9,14 @@ define(function(require, exports, module) {
 
         TEMPLATE: html,
 
+        configureDefault: function()
+        {
+            this.base();
+            this.config({
+              "message": "And your product is..."
+            });
+        },
+
         /**
          * Puts variables into the model for rendering within our template.
          * Once we've finished setting up the model, we must fire callback().
@@ -18,15 +26,15 @@ define(function(require, exports, module) {
          * @param callback
          */
         prepareModel: function(el, model, callback) {
-
             // get the current project
             // var project = this.observable("project").get();
 
             // the current branch
+            var self = this;
             var branch = this.observable("branch").get();
-
             // call into base method and then set up the model
             this.base(el, model, function() {
+                model.message = self.config().message;
 
                 // query for catalog:product instances
                 branch.queryNodes({ "_type": "catalog:product" }).then(function() {
@@ -80,7 +88,43 @@ define(function(require, exports, module) {
                 callback();
 
             });
+        },
+
+        isConfigurable: function()
+        {
+            return true;
+        },
+
+        handleConfiguration: function(div, data, callback)
+        {
+            var config = {};
+            config.data = data;
+            config.schema = {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "config": {
+                        "type": "object",
+                        "title": "Configuration",
+                        "properties": {
+                            "message": {
+                                "type": "string",
+                                "title": "Message"
+                            }
+                        }
+                    }
+                }
+            };
+            config.options = {};
+            config.observableHolder = Ratchet;
+
+            UI.configureDashlet(config, function (err, data) {
+                callback(err, data);
+            });
         }
-        
+
     }));
 });
