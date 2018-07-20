@@ -13,7 +13,7 @@ define(function(require, exports, module) {
         {
             this.base();
             this.config({
-              "message": "now THIS is podracing"
+              "message": "And your product is..."
             });
         },
 
@@ -102,9 +102,19 @@ define(function(require, exports, module) {
             config.schema = {
                 "type": "object",
                 "properties": {
-                    "message": {
+                    "title": {
                         "type": "string",
-                        "title": "Message"
+                        "title": "Title"
+                    },
+                    "config": {
+                        "type": "object",
+                        "title": "Configuration",
+                        "properties": {
+                            "message": {
+                                "type": "string",
+                                "title": "Message"
+                            }
+                        }
                     }
                 }
             };

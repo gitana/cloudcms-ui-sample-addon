@@ -1,5 +1,7 @@
 # Cloud CMS UI Sample Addon
 
+**Updated for Version 3.2**
+
 This GitHub repository provides a sample UI extension for the Cloud CMS user interface.  UI extensions consists of
 JavaScript, CSS and HTML templates that are bundled together as a module and deployed to your tenant.  Once deployed,
 the module is served alongside the rest of the Cloud CMS user interface.
