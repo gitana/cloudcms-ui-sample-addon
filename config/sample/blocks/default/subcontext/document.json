@@ -7,7 +7,7 @@
         "condition": true
     }],
     "config": {
-        "subcontext": {
+        "document-subcontext": {
             "items": [{
                 "key": "document",
                 "items": [{
