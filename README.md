@@ -117,7 +117,7 @@ The Alpaca code is here:
 ## Deploying to Cloud CMS
 
 To deploy to the Cloud CMS user interface, please take a look at the instructions provided here:
-    https://www.cloudcms.com/ui-extensions.html
+    https://www.cloudcms.com/documentation/modules.html
 
 
 ## Building for Production
