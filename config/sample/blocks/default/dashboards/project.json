@@ -1,37 +1,11 @@
 {
-    "evaluator": "and",
-    "condition": [{
-        "evaluator": "context-project",
-        "condition": true
-    }, {
-        "evaluator": "uri-match",
-        "condition": "/projects/{projectId}"
-    }],
+    "evaluator": "context-project",
+    "condition": true,
     "config": {
         "project-dashboard": {
             "availableDashlets": [{
                 "type": "sample-random-product-dashlet",
                 "title": "Random Product"
-            }],
-            "bindings": [{
-                "key": "random-product1",
-                "binding": "r1/c1"
-            }, {
-                "key": "random-product2",
-                "binding": "r1/c1"
-            }],
-            "dashlets": [{
-                "key": "random-product1",
-                "title": "Random Product",
-                "type": "sample-random-product-dashlet",
-                "message": "A random product for you",
-                "chrome": true
-            }, {
-                "key": "random-product2",
-                "title": "Another Random Product",
-                "type": "sample-random-product-dashlet",
-                "message": "Oh wow another random product",
-                "chrome": true
             }]
         }
     },
