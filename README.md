@@ -117,7 +117,7 @@ The Alpaca code is here:
 ## Deploying to Cloud CMS
 
 To deploy to the Cloud CMS user interface, please take a look at the instructions provided here:
-    https://www.cloudcms.com/documentation/modules.html
+https://gitana.io/documentation/gitana/4.0/ui/modules.html
 
 
 ## Building for Production
@@ -134,4 +134,4 @@ Once finished, your build should be in /dist. Be sure to set your source path to
 
 ## How do I get help?
 
-For help with these UI extensions, please contact support@cloudcms.com.
+For help with these UI extensions, please contact support@gitana.io
